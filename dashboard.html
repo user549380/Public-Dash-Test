@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dash.css') }}">
+    <title>Dashboard</title>
+    <!-- Favicon links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicons/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='images/favicons/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ url_for('static', filename='images/favicons/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicons/favicon.ico') }}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="{{ url_for('static', filename='images/favicons/browserconfig.xml') }}">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <img src="static/images/MULTIPLAN_LOGO_RGB.webp" alt="MultiPlan Logo" class="navbar-logo">
+            <div class="navbar-links">
+                {% if admin %}
+                <a href="{{ url_for('user_access') }}" class="btn">User Access</a>
+                {% endif %}
+                <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+            </div>
+        </nav>
+        <div class="dashboard">
+            <!-- Power BI Embedded Dashboard -->
+            <iframe class="dashboard-iframe" src="https://playground.powerbi.com/sampleReportEmbed?filterPaneEnabled=False&navContentPaneEnabled=False" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+    </div>
+</body>
+</html>
