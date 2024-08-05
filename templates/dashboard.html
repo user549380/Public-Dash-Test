@@ -22,7 +22,7 @@
             <img src="static/images/MULTIPLAN_LOGO_RGB.webp" alt="MultiPlan Logo" class="navbar-logo">
             <div class="navbar-links">
                 {% if admin %}
-                <a href="{{ url_for('user_access') }}" class="btn">User Access</a>
+                <a href="{{ url_for('user_access') }}" class="btn">User Access</a> <!-- This is for web app with login -->
                 {% endif %}
                 <a href="{{ url_for('logout') }}" class="btn">Logout</a>
             </div>
