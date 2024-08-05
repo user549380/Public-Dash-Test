@@ -34,7 +34,7 @@ body{
 .navbar-logo {
     height: auto; /* Adjusted size as needed */
     max-width: 200px;
-    margin-left: -25px; /* Adjust value to move the logo more to the left */
+    margin-left: -25px; 
 }
 
 .navbar-links {
